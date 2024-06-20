@@ -72,6 +72,7 @@ export enum DocumentSubscriptionStatus {
 export interface AuroraWorkspaceCreateInput {
   name: string;
   embeddingsModel: SelectProps.Option | null;
+  crossEncodingEnabled: boolean;
   crossEncoderModel: SelectProps.Option | null;
   languages: readonly SelectProps.Option[];
   metric: string;
@@ -85,6 +86,7 @@ export interface OpenSearchWorkspaceCreateInput {
   name: string;
   embeddingsModel: SelectProps.Option | null;
   languages: readonly SelectProps.Option[];
+  crossEncodingEnabled: boolean;
   crossEncoderModel: SelectProps.Option | null;
   hybridSearch: boolean;
   chunkSize: number;

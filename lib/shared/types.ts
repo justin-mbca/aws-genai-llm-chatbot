@@ -103,6 +103,7 @@ export interface SystemConfig {
     roleArn?: string;
   };
   llms: {
+    enableSagemakerModels: boolean;
     sagemaker: SupportedSageMakerModels[];
     huggingfaceApiSecretArn?: string;
     sagemakerSchedule?: {
@@ -120,6 +121,7 @@ export interface SystemConfig {
   };
   rag: {
     enabled: boolean;
+    enableEmbeddingModelsViaSagemaker: boolean;
     engines: {
       aurora: {
         enabled: boolean;
@@ -145,6 +147,7 @@ export interface SystemConfig {
       dimensions: number;
       default?: boolean;
     }[];
+    crossEncodingEnabled: boolean;
     crossEncoderModels: {
       provider: ModelProvider;
       name: string;
