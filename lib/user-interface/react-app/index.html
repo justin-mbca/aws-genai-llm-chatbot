@@ -24,18 +24,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
-      document.getElementById('fileInput').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        if (file) {
-          document.getElementById('fileDetails').innerHTML = `
-            <h3>File Details:</h3>
-            <p>Name: ${file.name}</p>
-            <p>Size: ${file.size} bytes</p>
-            <p>Type: ${file.type}</p>
-          `;
-        }
-      });
-    </script>
   </body>
 </html>
